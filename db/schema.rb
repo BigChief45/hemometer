@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315025600) do
+ActiveRecord::Schema.define(version: 20170315034026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "entries", force: :cascade do |t|
+    t.datetime "date"
+    t.text     "notes"
+    t.decimal  "red_blood_cell"
+    t.decimal  "white_blood_cell"
+    t.decimal  "platelets"
+    t.decimal  "hemoglobin"
+    t.decimal  "blood_glucose"
+    t.decimal  "total_cholesterol"
+    t.decimal  "triglyceride"
+    t.decimal  "ldl_cholesterol"
+    t.decimal  "hdl_cholesterol"
+    t.decimal  "weight"
+    t.decimal  "systolic_blood_pressure"
+    t.decimal  "diastolic_blood_pressure"
+    t.integer  "user_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

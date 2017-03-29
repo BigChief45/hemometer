@@ -13,6 +13,10 @@ class CreateEntries < ActiveRecord::Migration[5.0]
       t.decimal :ldl_cholesterol
       t.decimal :hdl_cholesterol
       t.decimal :weight
+      t.decimal :systolic_blood_pressure
+      t.decimal :diastolic_blood_pressure
+
+      t.integer :user_id
 
       t.timestamps
     end
