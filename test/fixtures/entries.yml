@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2017-03-15 03:40:26
+  notes: MyText
+  red_blood_cell: 9.99
+  white_blood_cell: 9.99
+  platelets: 9.99
+  hemoglobin: 9.99
+  blood_glucose: 9.99
+  total_cholesterol: 9.99
+  triglyceride: 9.99
+  ldl_cholesterol: 9.99
+  hdl_cholesterol: 9.99
+  weight: 9.99
+
+two:
+  date: 2017-03-15 03:40:26
+  notes: MyText
+  red_blood_cell: 9.99
+  white_blood_cell: 9.99
+  platelets: 9.99
+  hemoglobin: 9.99
+  blood_glucose: 9.99
+  total_cholesterol: 9.99
+  triglyceride: 9.99
+  ldl_cholesterol: 9.99
+  hdl_cholesterol: 9.99
+  weight: 9.99
