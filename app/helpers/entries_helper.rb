@@ -1,7 +1,5 @@
 module EntriesHelper
 
-  include Recommendations
-
   def progress_bar_color(item, current_value)
     # 'item' is a class of the Recommendations module which represents
     # a test result item (i.e Systolic Blood Pressure)
