@@ -1,0 +1,62 @@
+%nav.navbar.navbar-inverse
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-2", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to root_path, class: 'navbar-brand' do
+        %i.glyphicon.glyphicon-scale
+        Hemometer
+    #bs-example-navbar-collapse-2.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li.active
+          %a{"data-vivaldi-spatnav-clickable" => "1", :href => "#"}
+            Link
+            %span.sr-only (current)
+        %li
+          %a{"data-vivaldi-spatnav-clickable" => "1", :href => "#"} Link
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", "data-vivaldi-spatnav-clickable" => "1", :href => "#", :role => "button"}
+            Dropdown
+            %span.caret
+          %ul.dropdown-menu{:role => "menu"}
+            %li
+              %a{"data-vivaldi-spatnav-clickable" => "1", :href => "#"} Action
+            %li
+              %a{"data-vivaldi-spatnav-clickable" => "1", :href => "#"} Another action
+            %li
+              %a{"data-vivaldi-spatnav-clickable" => "1", :href => "#"} Something else here
+            %li.divider
+            %li
+              %a{"data-vivaldi-spatnav-clickable" => "1", :href => "#"} Separated link
+            %li.divider
+            %li
+              %a{"data-vivaldi-spatnav-clickable" => "1", :href => "#"} One more separated link
+      %form.navbar-form.navbar-left{:role => "search"}
+        .form-group
+          %input.form-control{:placeholder => "Search", :type => "text"}/
+        %button.btn.btn-default{:type => "submit"} Submit
+
+      %ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          %li
+            = link_to root_path do
+              %i.glyphicon.glyphicon-bell
+
+          %li.dropdown
+            %a{ :class => 'dropdown-toggle', "data-toggle" => 'dropdown', :role => 'button', "aria-expanded" => false }
+              %strong= current_user.email
+              %span.caret
+
+            %ul.dropdown-menu
+              %li
+                = link_to edit_user_registration_path do
+                  %i.glyphicon.glyphicon-cog
+                  Settings
+              %li.divider
+              %li
+                = link_to logout_path, method: :delete do
+                  %i.glyphicon.glyphicon-log-out
+                  Logout

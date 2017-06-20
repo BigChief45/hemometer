@@ -7,6 +7,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
     = stylesheet_link_tag 'https://bootswatch.com/united/bootstrap.min.css'
+    = javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+
   %body
+    = render 'layouts/navbar'
+
     .container
       = yield
